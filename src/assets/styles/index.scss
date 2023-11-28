@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './animation';
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y: hidden; //из-за отступа неактивного микрофона
+}
+
+.wrapper__app {
+	width: 90vw;
+	height: 100vh;
+	// width: 63vw;
+	// height: 99vh;
+	background-image: url('./images/animation_images/BG_one/Main_00000.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; //если формат будет 4:3 то включить от отпозиционировать по-другому незнайку и микрофон, т.к. на разрешении пк съедает верх и низ фона
+	animation: bg_main 12s linear infinite;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	> .text_answer {
+		margin-top: 15vh;
+		position: relative;
+		align-self: center;
+		padding: 60px 60px;
+		max-width: 46%;
+		z-index: 2;
+		border-radius: 100px;
+		text-align: center;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(255, 255, 255, 1);
+			filter: blur(20px);
+			z-index: -1;
+			border-radius: 100px;
+		}
+	}
+
+	> .animation {
+		position: absolute;
+		bottom: 8%;
+		left: 9%;
+		width: 28vw;
+		height: 78vh;
+		background-image: url('./images/animation_images/hello/Final_00000.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		// animation: i_do_not_no_hello 3s linear infinite;
+	}
+
+	> .animation_wait {
+		position: absolute;
+		bottom: 8%;
+		left: 9%;
+		width: 28vw;
+		height: 78vh;
+		background-image: url('./images/animation_images/listen_to_the_questions/Поворот_00047.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	> .app__hello {
+		width: 43.8%;
+		align-self: center;
+		margin-top: 16.5vh;
+	}
+
+	> .block__app__micro {
+		align-self: center;
+		> .app__micro {
+			width: 24.5vh;
+			height: 24.5vh;
+			margin-bottom: 16.1vh;
+			position: relative;
+			z-index: 99;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		> .app__micro_active {
+			width: 40vh;
+			height: 40vh;
+			margin-bottom: 9vh;
+			background-image: url('./images/animation_images/Mic_Button/Mic_Button_00000.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			animation: micro 6s linear infinite;
+			position: relative;
+			z-index: 99;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.logo-skillfactory {
+	width: 10%;
+	height: 6%;
+	position: absolute;
+
+	bottom: 8%;
+	padding-left: 20px;
+}
+
+.logo-ecsmo {
+	width: 10%;
+	padding-left: 20px;
+	position: absolute;
+	bottom: 1%;
+}

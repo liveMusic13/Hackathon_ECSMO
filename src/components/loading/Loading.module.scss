@@ -1,0 +1,23 @@
+.wrapper__loading {
+	// background-color: bisque;
+	background-image: url('./images/animation_images/BG_one/Main_00000.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 99vw;
+	height: 99vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> .test {
+		width: 100px;
+		height: 100px;
+		background-image: url('./images/animation_images/hello/Final_00000.png');
+		position: absolute;
+		z-index: -1;
+	}
+
+	> .svg-animation {
+	}
+}
